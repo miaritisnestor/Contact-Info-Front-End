@@ -1,0 +1,26 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile Phone</th>
+        <th scope="col">Home Phone</th>
+        <th scope="col">Work Phone</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let ci of contactInfoService.contactInfoList">
+        <td (click)="populateForm(ci)">{{ci.firstName}}</td>
+        <td (click)="populateForm(ci)">{{ci.lastName}}</td>
+        <td (click)="populateForm(ci)">{{ci.address}}</td>
+        <td (click)="populateForm(ci)">{{ci.email}}</td>
+        <td (click)="populateForm(ci)">{{ci.phone.mobilePhone}}</td>
+        <td (click)="populateForm(ci)">{{ci.phone.homePhone}}</td>
+        <td (click)="populateForm(ci)">{{ci.phone.workPhone}}</td>
+        <td (click)="populateForm(ci)"><i class="fa fa-trash-alt fa-lg text-danger" (click)="onDelete(ci.contactInfoId)"></i></td>
+      </tr>
+    </tbody>
+  </table>
