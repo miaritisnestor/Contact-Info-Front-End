@@ -22,7 +22,7 @@ import * as $ from 'jquery';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ContactsComponent,ContactListAddEditFormComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
