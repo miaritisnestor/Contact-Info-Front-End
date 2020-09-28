@@ -43,6 +43,10 @@ export class ContactListAddEditFormComponent implements OnInit {
     }
   }
 
+  refresh(){
+    this.contactInfoService.getContactInfos();
+  }
+
   onSubmit(form:NgForm){
     if(this.contactInfoService.contactInfoFormData.contactInfoId == 0){
       this.insertRecord(form);

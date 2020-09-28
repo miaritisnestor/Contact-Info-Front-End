@@ -27,7 +27,8 @@ export class ContactListComponent implements OnInit {
     // open form
     this.contactsComponent.openModalNative.nativeElement.click();
     // assign record data to form fields
-    this.contactInfoService.contactInfoFormData = Object.assign({},ci);
+    this.contactInfoService.contactInfoFormData = Object.assign({}, ci);
+    console.log(ci);
   }
 
   onDelete(id){
